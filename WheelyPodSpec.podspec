@@ -13,7 +13,7 @@ s.ios.deployment_target = '12.0'
 s.name = "WheelyPodSpec"
 s.summary = "WheelyPodSpec bla bla"
 s.requires_arc = true
-s.version = "0.1.0"
+s.version = "0.1.2"
 s.license = { :type => "MIT", :file => "LICENSE" }
 
 
