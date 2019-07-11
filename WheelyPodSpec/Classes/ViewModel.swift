@@ -17,7 +17,7 @@ class ViewModel {
     private (set) public lazy var enableLoadingButton = Box(enableLoadingButtonRule)
     private (set) public lazy var enableCancelButton = Box(enableCancelButtonRule)
     private (set) public lazy var showLoadingIndicator = Box(isLoading)
-    private (set) public var currentMainImage: Box<UIImage?> = Box(UIImage(imageLiteralResourceName: "placeholderImage"))
+    private (set) public var currentMainImage: Box<UIImage?> = Box(UIImage.fromPodBundle(wiith: "placeholderImage"))
     
     //MARK: Properties
     private (set) public var textInput = "https://my-hit.org/storage/952427_1920x1080x500.jpg" { didSet { updateButtonStatus()}}
@@ -28,7 +28,7 @@ class ViewModel {
             updateButtonStatus()
         }
     }
-   
+    
     //MARK: Computed properties
     private var dividedByTwo: Bool {
         return countNumber.value != 0 && countNumber.value % 2 == 0
@@ -86,4 +86,11 @@ class ViewModel {
         enableCancelButton.value = enableCancelButtonRule
     }
     
+}
+
+extension UIImage {
+    static func fromPodBundle(wiith name: String) -> UIImage? {
+        let bundle = Bundle(for: TestViewController.self)
+        return UIImage(named: name, in: bundle, compatibleWith: nil)
+    }
 }
