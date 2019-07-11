@@ -8,21 +8,21 @@
 
 import Foundation
 
-public class Box<T> {
-    public typealias Listener = (T) -> Void
-    public var listener: Listener?
-    public var value: T {
+class Box<T> {
+    typealias Listener = (T) -> Void
+    var listener: Listener?
+    var value: T {
         didSet {
             listener?(value)
         }
     }
     
     
-    public init(_ value: T) {
+    init(_ value: T) {
         self.value = value
     }
     
-    public func bind(listener: Listener?) {
+    func bind(listener: Listener?) {
         self.listener = listener
         listener?(value)
     }

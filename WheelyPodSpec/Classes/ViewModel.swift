@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ViewModel {
+class ViewModel {
     
     private let model = Model()
     
@@ -50,12 +50,12 @@ public class ViewModel {
     }
     
     //MARK: Implementation
-    public func addCount() {
+    func addCount() {
         countNumber.value += 1
         updateButtonStatus()
     }
     
-    public func loadImage() {
+    func loadImage() {
         let textInput = self.textInput
         if let url = URL(string: textInput) {
             isLoading = true
@@ -71,12 +71,12 @@ public class ViewModel {
         }
     }
     
-    public func cancelLoading() {
+    func cancelLoading() {
         isLoading = false
         model.cancel()
     }
     
-    public func updateTextInput( _ text: String?) {
+    func updateTextInput( _ text: String?) {
         textInput = text ?? ""
     }
     

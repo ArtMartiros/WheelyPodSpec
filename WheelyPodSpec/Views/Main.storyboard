@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Test View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TestViewController" customModule="WheeleDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-0Z-ojU">
+                                <rect key="frame" x="228" y="106" width="144" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="h27-Dj-Fz5"/>
+                                    <constraint firstAttribute="width" secondItem="iOp-0Z-ojU" secondAttribute="height" multiplier="1:1" id="mAa-9L-dGS"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="DZc-6u-fbZ">
+                                <rect key="frame" x="228" y="300" width="144" height="208.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrs-3Q-fev">
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpC-cq-QGq">
+                                        <rect key="frame" x="0.0" y="94" width="144" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6nu-4v-fxw">
+                                        <rect key="frame" x="0.0" y="178.5" width="144" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnp-A2-6UH">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                                <state key="normal" title="Load"/>
+                                                <connections>
+                                                    <action selector="tapLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RZt-5o-GBA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPa-cG-Mhz">
+                                                <rect key="frame" x="48" y="0.0" width="48" height="30"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="tapCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dun-4d-dV3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffj-Xu-IzG">
+                                                <rect key="frame" x="96" y="0.0" width="48" height="30"/>
+                                                <state key="normal" title="Add"/>
+                                                <connections>
+                                                    <action selector="tapAddCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="686-Ce-Iu8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="pHh-Xh-KzV">
+                                <rect key="frame" x="281.5" y="159.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DZc-6u-fbZ" firstAttribute="centerX" secondItem="iOp-0Z-ojU" secondAttribute="centerX" id="5ul-tO-BgZ"/>
+                            <constraint firstItem="iOp-0Z-ojU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="H5e-RG-lg0"/>
+                            <constraint firstItem="pHh-Xh-KzV" firstAttribute="centerY" secondItem="iOp-0Z-ojU" secondAttribute="centerY" id="I8p-Gl-WGO"/>
+                            <constraint firstItem="DZc-6u-fbZ" firstAttribute="top" secondItem="iOp-0Z-ojU" secondAttribute="bottom" constant="50" id="Nor-mi-0vr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iOp-0Z-ojU" secondAttribute="trailing" constant="10" id="SFW-VV-VGe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DZc-6u-fbZ" secondAttribute="bottom" constant="20" id="TXF-Ix-WXe"/>
+                            <constraint firstItem="iOp-0Z-ojU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="jgP-Wp-XrB"/>
+                            <constraint firstItem="pHh-Xh-KzV" firstAttribute="centerX" secondItem="iOp-0Z-ojU" secondAttribute="centerX" id="kZe-cP-2Bt"/>
+                            <constraint firstItem="iOp-0Z-ojU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="p4q-ic-HV4"/>
+                            <constraint firstItem="DZc-6u-fbZ" firstAttribute="width" secondItem="iOp-0Z-ojU" secondAttribute="width" id="rvg-xR-O2i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="pHh-Xh-KzV" id="PAW-ND-Ktt"/>
+                        <outlet property="addButton" destination="Ffj-Xu-IzG" id="gjk-XD-M6z"/>
+                        <outlet property="cancelButton" destination="LPa-cG-Mhz" id="xJB-Xh-vpQ"/>
+                        <outlet property="countLabel" destination="VpC-cq-QGq" id="H3r-3N-R6l"/>
+                        <outlet property="imageView" destination="iOp-0Z-ojU" id="eiA-Vj-10c"/>
+                        <outlet property="loadButton" destination="Dnp-A2-6UH" id="Rhx-RW-156"/>
+                        <outlet property="urlTextField" destination="hrs-3Q-fev" id="BBc-01-qIe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -12,6 +12,8 @@
 		566AA94122D7B5A000D5B7AD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AA93E22D7B5A000D5B7AD /* ViewModel.swift */; };
 		566AA94222D7B5A000D5B7AD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AA93F22D7B5A000D5B7AD /* Model.swift */; };
 		566AA94422D7B5AD00D5B7AD /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 566AA94322D7B5AD00D5B7AD /* Image.xcassets */; };
+		566AA94722D7C4E700D5B7AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566AA94622D7C4E700D5B7AD /* Main.storyboard */; };
+		566AA94922D7C4EC00D5B7AD /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566AA94822D7C4EC00D5B7AD /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		566AA93E22D7B5A000D5B7AD /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		566AA93F22D7B5A000D5B7AD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		566AA94322D7B5AD00D5B7AD /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		566AA94622D7C4E700D5B7AD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		566AA94822D7C4EC00D5B7AD /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		566AA93222D7B57300D5B7AD /* WheelyPodSpec */ = {
 			isa = PBXGroup;
 			children = (
+				566AA94A22D7C52500D5B7AD /* Controllers */,
+				566AA94522D7C4C500D5B7AD /* Views */,
 				566AA93C22D7B58300D5B7AD /* Resources */,
 				566AA93B22D7B57A00D5B7AD /* Classes */,
 				566AA93322D7B57300D5B7AD /* WheelyPodSpec.h */,
@@ -78,6 +84,22 @@
 				566AA94322D7B5AD00D5B7AD /* Image.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		566AA94522D7C4C500D5B7AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				566AA94622D7C4E700D5B7AD /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		566AA94A22D7C52500D5B7AD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				566AA94822D7C4EC00D5B7AD /* TestViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				566AA94422D7B5AD00D5B7AD /* Image.xcassets in Resources */,
+				566AA94722D7C4E700D5B7AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +185,7 @@
 			files = (
 				566AA94222D7B5A000D5B7AD /* Model.swift in Sources */,
 				566AA94122D7B5A000D5B7AD /* ViewModel.swift in Sources */,
+				566AA94922D7C4EC00D5B7AD /* TestViewController.swift in Sources */,
 				566AA94022D7B5A000D5B7AD /* Box.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
